@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #182E6F;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+/* Línea debajo del nombre */
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #00d4ff;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #00d4ff;
+}
+
+.intro {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* SECCIONES */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TÍTULOS */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 35px;
+    position: relative;
+}
+
+/* Línea debajo de títulos */
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00d4ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ABOUT */
+.about p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* SKILLS */
+.skill {
+    margin: 20px 0;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.level {
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Niveles */
+.html { width: 80%; background: #00d4ff; }
+.js { width: 70%; background: #00d4ff; }
+.mysql { width: 65%; background: #00d4ff; }
+.csharp { width: 60%; background: #00d4ff; }
+
+/* EDUCACION */
+.education {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.edu-item {
+    margin: 20px 0;
+}
+
+.edu-item h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #00d4ff;
+}
+
+.edu-item p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* INTERESES */
+.interests ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.interests li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1f4a;
+}
