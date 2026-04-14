@@ -1,137 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #182E6F;
-    color: white;
+    background: #eef3f9;
+    color: #182E6F;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #182E6F;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00d4ff;
 }
 
 /* HERO */
 .hero {
+    background: linear-gradient(135deg, #182E6F, #1f4ed8);
+    color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 140px 20px;
 }
 
 .hero h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin: 0;
 }
 
-/* Línea debajo del nombre */
 .hero h1::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 300px;
     height: 4px;
     background-color: #00d4ff;
     margin: 15px auto;
-    border-radius: 2px;
 }
 
 .subtitle {
-    font-size: 25px;
-    margin: 10px 0;
-    color: #00d4ff;
+    font-size: 22px;
+    opacity: 0.9;
 }
 
 .intro {
-    font-size: 18px;
-    max-width: 600px;
-    margin: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    opacity: 0.8;
 }
 
 /* SECCIONES */
 section {
-    padding: 60px 20px;
-    max-width: 900px;
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1000px;
     margin: auto;
 }
 
-/* TÍTULOS */
+/* Alternar colores */
+.about { background: #f9fbff; }
+.skills { background: white; }
+.education { background: #f9fbff; }
+.interests { background: white; }
+.projects { background: #f9fbff; }
+
+/* TITULOS */
 h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 35px;
-    position: relative;
+    font-size: 28px;
 }
 
-/* Línea debajo de títulos */
 h2::after {
     content: "";
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #00d4ff;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    background: #00d4ff;
+    margin: 10px auto;
 }
 
-/* ABOUT */
-.about p {
-    text-align: center;
-    line-height: 1.6;
+/* CARDS */
+.skill, .edu-item, .project, .contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.skill:hover, .edu-item:hover, .project:hover {
+    transform: translateY(-5px);
 }
 
 /* SKILLS */
-.skill {
-    margin: 20px 0;
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .bar {
-    width: 100%;
     height: 10px;
     background: #ccc;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .level {
     height: 10px;
-    border-radius: 5px;
+    background: #00d4ff;
+    width: 0;
+    animation: load 1.5s forwards;
 }
 
-/* Niveles */
-.html { width: 80%; background: #00d4ff; }
-.js { width: 70%; background: #00d4ff; }
-.mysql { width: 65%; background: #00d4ff; }
-.csharp { width: 60%; background: #00d4ff; }
+.html { width: 65%; }
+.js { width: 85%; }
+.mysql { width: 80%; }
+.csharp { width: 60%; }
+
+@keyframes load {
+    from { width: 0; }
+}
 
 /* EDUCACION */
-.education {
-    text-align: center;
-    max-width: 600px;
-    margin: auto;
-}
-
 .edu-item {
-    margin: 20px 0;
-}
-
-.edu-item h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    color: #00d4ff;
-}
-
-.edu-item p {
-    margin: 0;
-    font-size: 16px;
-    opacity: 0.9;
+    margin: 10px auto;
+    max-width: 500px;
 }
 
 /* INTERESES */
 .interests ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 .interests li {
-    margin: 10px 0;
-    font-size: 18px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* PROYECTOS */
+.project {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* CONTACT PANEL */
+.contact-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid #e0e0e0;
+}
+
+.contact-panel.active {
+    display: block;
+}
+
+.contact-card {
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
+    background: #182E6F;
+    color: white;
     padding: 20px;
-    background: #0f1f4a;
+    text-align: center;
+}
+
+
+/* 📱 RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    section {
+        max-width: 90%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h1::after {
+        width: 200px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .intro {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 50px 15px;
+        max-width: 95%;
+    }
+
+    .skill, .edu-item, .project {
+        padding: 15px;
+    }
+
+    .edu-item {
+        margin: 10px;
+    }
+
+    .interests ul {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    .contact-panel {
+        width: 90%;
+        right: 5%;
+        top: 70px;
+    }
+}
+
+/* Pantallas muy chicas */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
 }

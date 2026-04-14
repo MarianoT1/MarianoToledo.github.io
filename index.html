@@ -2,63 +2,109 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariano Toledo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Mariano Toledo</h1>
-        <p class="subtitle">Programador Junior</p>
-        <p class="intro">
-            Apasionado por las tecnologías y los medios digitales.
-        </p>
-    </section>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Mariano Toledo</div>
 
-    <!-- SOBRE MI -->
-    <section class="about">
-        <h2>Sobre mí</h2>
-        <p>
-            Tengo 21 años y actualmente estudio Desarrollo de Software en ISAUI. 
-            Me encuentro en constante aprendizaje, buscando mejorar mis habilidades 
-            y adquirir experiencia en el mundo del desarrollo.
-        </p>
-        <p>
-            Disfruto trabajar con tecnologías modernas, desarrollar proyectos personales 
-            y enfrentar nuevos desafíos que me permitan crecer profesionalmente.
-        </p>
-    </section>
+    <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#education">Educación</a>
+        <a href="#interests">Intereses</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#" onclick="toggleContact()">Contacto</a>
+    </nav>
+</header>
 
-    <!-- HABILIDADES -->
-    <section class="skills">
-        <h2>Habilidades</h2>
+<!-- PANEL CONTACTO -->
+<div class="contact-panel" id="contactPanel">
 
-        <div class="skill">
-            <span>HTML & CSS</span>
-            <div class="bar"><div class="level html"></div></div>
-        </div>
+    <div class="contact-card">
+        <strong>GitHub</strong>
+        <p><a href="https://github.com/MarianoT1" target="_blank">github.com/MarianoT1</a></p>
+    </div>
 
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="bar"><div class="level js"></div></div>
-        </div>
+    <div class="contact-card">
+        <strong>Correo</strong>
+        <p><a href="mailto:marianotoledo311@gmail.com">marianotoledo311@gmail.com</a></p>
+    </div>
 
-        <div class="skill">
-            <span>MySQL</span>
-            <div class="bar"><div class="level mysql"></div></div>
-        </div>
+    <div class="contact-card">
+        <strong>Teléfono</strong>
+        <p><a href="tel:+543512383237">+54 351 2383237</a></p>
+    </div>
 
-        <div class="skill">
-            <span>C#</span>
-            <div class="bar"><div class="level csharp"></div></div>
-        </div>
+    <div class="contact-card">
+        <strong>Instagram</strong>
+        <p>@mariano.t1</p>
+    </div>
 
-    </section>
+</div>
 
-    <!-- EDUCACION -->
-   <section class="education">
+<script>
+function toggleContact() {
+    const panel = document.getElementById("contactPanel");
+    panel.classList.toggle("active");
+}
+</script>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <h1>Mariano Toledo</h1>
+    <p class="subtitle">Programador Junior</p>
+    <p class="intro">
+        Apasionado por la tecnología y el desarrollo de software.
+    </p>
+</section>
+
+<!-- SOBRE MI -->
+<section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+        Tengo 21 años y actualmente estudio Desarrollo de Software en ISAUI 
+        (Instituto Superior Arturo Umberto Illia), sede en Villa Carlos Paz de la UPC.
+    </p>
+    <p>
+        Me encuentro en constante aprendizaje, buscando mejorar mis habilidades 
+        y adquirir experiencia en el mundo del desarrollo.
+    </p>
+</section>
+
+<!-- HABILIDADES -->
+<section id="skills" class="skills">
+    <h2>Habilidades</h2>
+
+    <div class="skill">
+        <span>HTML & CSS</span>
+        <div class="bar"><div class="level html"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="level js"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>MySQL</span>
+        <div class="bar"><div class="level mysql"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>C#</span>
+        <div class="bar"><div class="level csharp"></div></div>
+    </div>
+
+</section>
+
+<!-- EDUCACION -->
+<section id="education" class="education">
     <h2>Educación</h2>
 
     <div class="edu-item">
@@ -67,26 +113,46 @@
     </div>
 
     <div class="edu-item">
-        <h3>Bachillerato en Economía y Administración de Empresas</h3>
+        <h3>Bachillerato en Economía y Administración</h3>
         <p>Instituto San Carlos</p>
     </div>
-
 </section>
-    <!-- INTERESES -->
-    <section class="interests">
-        <h2>Intereses</h2>
-        <ul>
-            <li>Tecnología y programación</li>
-            <li>Desarrollo web</li>
-            <li>Aprendizaje continuo</li>
-            <li>Resolución de problemas</li>
-        </ul>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Mariano Toledo</p>
-    </footer>
+<!-- INTERESES -->
+<section id="interests" class="interests">
+    <h2>Intereses</h2>
+    <ul>
+        <li>Tecnología</li>
+        <li>Desarrollo web</li>
+        <li>Aprendizaje continuo</li>
+        <li>Resolución de problemas</li>
+    </ul>
+</section>
+
+<!-- PROYECTOS -->
+<section id="projects" class="projects">
+    <h2>Proyectos</h2>
+
+    <div class="project">
+        <h3>Portfolio en GitHub</h3>
+        <p>
+            Repositorio donde publico mis proyectos y prácticas.
+        </p>
+        <a href="https://github.com/MarianoT1" target="_blank">Ver en GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Sistema de Gestión Inmobiliario</h3>
+        <p>
+            Aplicación para gestionar propiedades y clientes desarrollada en equipo.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Mariano Toledo</p>
+</footer>
 
 </body>
 </html>
