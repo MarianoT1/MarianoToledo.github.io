@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #eef3f9;
+    color: #182E6F;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #182E6F;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #182E6F, #1f4ed8);
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 4px;
+    background-color: #00d4ff;
+    margin: 15px auto;
+}
+
+.subtitle {
+    font-size: 22px;
+    opacity: 0.9;
+}
+
+.intro {
+    max-width: 500px;
+    margin: 20px auto;
+    opacity: 0.8;
+}
+
+/* SECCIONES */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Alternar colores */
+.about { background: #f9fbff; }
+.skills { background: white; }
+.education { background: #f9fbff; }
+.interests { background: white; }
+.projects { background: #f9fbff; }
+
+/* TITULOS */
+h2 {
+    font-size: 28px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 10px auto;
+}
+
+/* CARDS */
+.skill, .edu-item, .project, .contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.skill:hover, .edu-item:hover, .project:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar {
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.level {
+    height: 10px;
+    background: #00d4ff;
+    width: 0;
+    animation: load 1.5s forwards;
+}
+
+.html { width: 65%; }
+.js { width: 85%; }
+.mysql { width: 80%; }
+.csharp { width: 60%; }
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* EDUCACION */
+.edu-item {
+    margin: 10px auto;
+    max-width: 500px;
+}
+
+/* INTERESES */
+.interests ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.interests li {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* PROYECTOS */
+.project {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* CONTACT PANEL */
+.contact-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid #e0e0e0;
+}
+
+.contact-panel.active {
+    display: block;
+}
+
+.contact-card {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* FOOTER */
+footer {
+    background: #182E6F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
